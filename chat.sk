@@ -6,17 +6,13 @@ on load:
 
         set skript-yaml value "version" of "plugins\ChatFormat\config.yml" to "1.0"
 
-        set skript-yaml value "main.ranks.prefix.enabled" of "plugins\ChatFormat\config.yml" to false
-        set skript-yaml value "main.ranks.prefix.placeholder" of "plugins\ChatFormat\config.yml" to ""
-        set skript-yaml value "main.ranks.suffix.enabled" of "plugins\ChatFormat\config.yml" to true
-
         set skript-yaml value "chat.enabled" of "plugins\ChatFormat\config.yml" to true
         set skript-yaml value "chat.format" of "plugins\ChatFormat\config.yml" to "&7<player>: <message>"
         set skript-yaml value "chat.colored-chat.enabled" of "plugins\ChatFormat\config.yml" to true
         set skript-yaml value "chat.colored-chat.permission" of "plugins\ChatFormat\config.yml" to "cf.colored"
 
 
-        set the comment of yaml node "chat" from "plugins\ChatFormat\config.yml" to "Main Formating" and "<player> - player's name" and "<message> - player's message"
+        set the comment of yaml node "chat" from "plugins\ChatFormat\config.yml" to "Main Formating" and "Read the docs which you can find on my" and "spigot page!"
 
         save yaml "plugins\ChatFormat\config.yml"
 
