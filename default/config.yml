@@ -1,0 +1,13 @@
+## Created by UziPlex
+
+version: 1.0
+
+# Main Formating
+# <player> - player's name
+# <message> - player's message
+chat:
+    enabled: true
+    format: "&7<player>: <message>"
+    colored-chat:
+        enabled: true
+        permission: cf.colored
