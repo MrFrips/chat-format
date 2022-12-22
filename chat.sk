@@ -1,0 +1,46 @@
+on load:
+    load "plugins\ChatFormat\config.yml" as "plugins\ChatFormat\config.yml"
+
+    skript-yaml "plugins\ChatFormat\config.yml" is empty:
+        set the header of "plugins\ChatFormat\config.yml" to "Created by UziPlex"
+
+        set skript-yaml value "version" of "plugins\ChatFormat\config.yml" to "1.0"
+
+        set skript-yaml value "main.ranks.prefix.enabled" of "plugins\ChatFormat\config.yml" to false
+        set skript-yaml value "main.ranks.prefix.placeholder" of "plugins\ChatFormat\config.yml" to ""
+        set skript-yaml value "main.ranks.suffix.enabled" of "plugins\ChatFormat\config.yml" to true
+
+        set skript-yaml value "chat.enabled" of "plugins\ChatFormat\config.yml" to true
+        set skript-yaml value "chat.format" of "plugins\ChatFormat\config.yml" to "&7<player>: <message>"
+        set skript-yaml value "chat.colored-chat.enabled" of "plugins\ChatFormat\config.yml" to true
+        set skript-yaml value "chat.colored-chat.permission" of "plugins\ChatFormat\config.yml" to "cf.colored"
+
+
+        set the comment of yaml node "chat" from "plugins\ChatFormat\config.yml" to "Main Formating" and "<player> - player's name" and "<message> - player's message"
+
+        save yaml "plugins\ChatFormat\config.yml"
+
+on chat:
+    if skript-yaml value "chat.enabled" from "plugins\ChatFormat\config.yml" is true:
+        if skript-yaml value "chat.colored-chat.enabled" from "plugins\ChatFormat\config.yml" is true:
+            if player has permission skript-yaml value "chat.colored-chat.permission" from "plugins\ChatFormat\config.yml":
+                set {_m} to skript-yaml value "chat.format" from "plugins\ChatFormat\config.yml"
+                replace all "<player>" with "%player%" in {_m}
+                replace all "<message>" with "%coloured message%" in {_m}
+                replace all "<prefix>" with "%coloured player's prefix%" in {_m}
+                replace all "<suffix>" with "%coloured player's suffix%" in {_m}
+                set the chat format to "%{_m}%"
+            else:
+                set {_m} to skript-yaml value "chat.format" from "plugins\ChatFormat\config.yml"
+                replace all "<player>" with "%player%" in {_m}
+                replace all "<message>" with "%message%" in {_m}
+                replace all "<prefix>" with "%coloured player's prefix%" in {_m}
+                replace all "<suffix>" with "%coloured player's suffix%" in {_m}
+                set the chat format to "%{_m}%"
+        else:
+            set {_m} to skript-yaml value "chat.format" from "plugins\ChatFormat\config.yml"
+            replace all "<player>" with "%player%" in {_m}
+            replace all "<message>" with "%message%" in {_m}
+            replace all "<prefix>" with "%coloured player's prefix%" in {_m}
+            replace all "<suffix>" with "%coloured player's suffix%" in {_m}
+            set the chat format to "%{_m}%"
