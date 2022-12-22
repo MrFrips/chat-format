@@ -3,8 +3,8 @@
 version: 1.0
 
 # Main Formating
-# <player> - player's name
-# <message> - player's message
+# Read the docs which you can find on my
+# spigot page!
 chat:
     enabled: true
     format: "&7<player>: <message>"
