@@ -1,13 +1,11 @@
-## Created by UziPlex
+## Created by UziPlex edit by MrFrips
 
-version: 1.0
+version: 1.2
 
 # Main Formating
-# Read the docs which you can find on my
-# spigot page!
 chat:
     enabled: true
-    format: "&7<player>: <message>"
+    format: "<player> → &r<message>"
     colored-chat:
         enabled: true
         permission: cf.colored
