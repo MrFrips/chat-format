@@ -1,4 +1,4 @@
-# Awesome Chat Format Skript
-### _Created By Uzivo!_
+# Awesome Chat Format for Skript.jar
+### Created By Uzivo, Edit By MrFrips
 
-Leave a review for my skript if you want :)
+chat.sk for Minecraft chat, just replacing vanilla chat, on new chat.
