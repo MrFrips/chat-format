@@ -2,3 +2,5 @@
 ### Created By Uzivo, Edit By MrFrips
 
 chat.sk for Minecraft chat, just replacing vanilla chat, on new chat.
+
+use with plugin skript.jar
